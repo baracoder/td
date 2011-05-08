@@ -3,7 +3,7 @@
 $EDITOR $HOME/todo.txt
 
 # filter removed lines as removed lines are done
-diff $HOME/.todo.txt $HOME/todo.txt |grep '^<'|cut -d\  -f2- |\
+diff $HOME/.todo.txt $HOME/todo.txt |grep '^<'|cut -d\  -f2- |grep -v '^#'|\
 while L=`line`; do
     DATE=`date '+%Y/%m/%d %H:%M'`
     echo "$DATE $L" >> $HOME/done.txt
