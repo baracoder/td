@@ -1,0 +1,6 @@
+#!/bin/bash
+grep -v '^#' $HOME/todo.txt | (
+[ $# -eq 0 ] && cat
+[ $# -gt 0 ] && grep -i "$*"
+)
+

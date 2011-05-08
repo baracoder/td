@@ -1,0 +1,45 @@
+This is my collection of scripts to manage todo lists.
+I was searching for an easy way how to manage todos. But the most tools
+were to hard to use. I often forgot what todo, before I could write it
+down.
+So I made some simple wrappers for powerfull tools like grep and diff.
+
+
+INSTALLATION
+============
+
+1. clone this git
+2. add the bin directory to your PATH variable
+
+
+USAGE
+=====
+
+Each line in the file is a todo entry expect lines starting with "#".
+They will be ignored. They are usefull as modelines for editor and so
+on.
+
+
+* ta
+    Lets you add new lines to the file.
+
+* te
+    This script set lets you use your favorite editor to write your
+    todos in a simple txt file. After that it checks if some entries are
+    removed.  Removed entries will go to the done.txt list.
+
+* tl [regex]
+    Lists all the entries in the file. If you add a regex it wil only
+    show matching entries.
+
+* report [timespan]
+    NOT IMPLEMENTED yet..
+    Lets you generate a report on done todos for the last week (1w) or
+    whatever you want.
+
+TIPPS
+=====
+
+* add 'tl' to your bashrc to remind you every time you open a terminal
+* changing the the text of a todo will result in a new todo and the old
+  marked as done
